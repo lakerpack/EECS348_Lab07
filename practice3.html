@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Three</title>
+</head>
+<body>
+    <label for "first1">Enter your password: </label> <br>
+    <input type = "password" id = "first1"> <br>
+    <label for "second2">Enter your password again: </label> <br>
+    <input type = "password" id = "second2"> <br>
+    <button onclick = matchevent()>Check</button>
+    <script>
+
+        function matchevent(){
+            let first = document.getElementById("first1").value;
+            let second = document.getElementById("second2").value;
+            if (first.length < 8) {
+                alert("The length of the first password is less than 8 letters!")
+            } else if (second.length < 8) {
+                alert("The length of the second password is less than 8 letters!")
+            } else if (first != second) {
+                alert("Two passwords don't match!")
+            } else {
+                alert("Everything is good!")
+            }
+        }
+    </script>
+
+</body>
+</html>

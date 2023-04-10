@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Two</title>
+  </head>
+  <body>
+    <p id="target">
+      Dummy text... Dummy text...Dummy text...Dummy text...Dummy text...Dummy
+      text...Dummy text...Dummy text...Dummy text...Dummy text...Dummy text...
+    </p>
+    <script type="text/javascript" src="functions.js"></script>
+    Border R(0-255): <input type="text" id="border_R" value="" /> <br />
+    Border G(0-255): <input type="text" id="border_G" value="" /> <br />
+    Border B(0-255): <input type="text" id="border_B" value="" /> <br />
+    Border Width: <input type="text" id="border_width" value="" /> <br />
+    Background R(0-255): <input type="text" id="bg_R" value="" /> <br />
+    Background G(0-255): <input type="text" id="bg_G" value="" /> <br />
+    Background B(0-255): <input type="text" id="bg_B" value="" /> <br />
+    <button onclick="change()">Change the color!</button> <br />
+    <script>
+      function change() {
+        let BR = document.getElementById("border_R").value;
+        let BG = document.getElementById("border_G").value;
+        let BB = document.getElementById("border_B").value;
+        let width = document.getElementById("border_width").value;
+        let R = document.getElementById("bg_R").value;
+        let G = document.getElementById("bg_G").value;
+        let B = document.getElementById("bg_B").value;
+        let para = document.getElementById("target");
+        para.style.borderColor = `rgb(${BR},${BG},${BB})`;
+        para.style.borderWidth = `${width}px`;
+        para.style.borderStyle = "solid";   
+        para.style.backgroundColor = `rgb(${R},${G},${B})`;
+      }
+    </script>
+  </body>
+</html>
